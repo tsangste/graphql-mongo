@@ -1,0 +1,14 @@
+version: '3.2'
+services:
+
+  mongo:
+    image: library/mongo:4.0.0
+    restart: always
+    ports:
+    - "27017:27017"
+
+  service:
+    build: .
+    restart: always
+    ports:
+     - "3000:3000"
